@@ -19,12 +19,12 @@ public static void main(String[] args) {
 @Override
 public void start(Stage primaryStage) {
 	
-    primaryStage.setTitle("1.1 - Stretching Out");
+    primaryStage.setTitle("1.1 - Stretching Out - Demo");
  
     myBrowser = new MyBrowser();
     scene = new Scene(myBrowser);
     
-    primaryStage.setMaximized(true);
+    primaryStage.setMaximized(false);
     primaryStage.setResizable(false);
     primaryStage.setScene(scene);
     primaryStage.show();
@@ -32,14 +32,14 @@ public void start(Stage primaryStage) {
  
 class MyBrowser extends Region{
 
-    final String pageHtml = "Index.html";
+    final String pageHtml = "clockBar.html";
 
     WebView webView = new WebView();
     WebEngine webEngine = webView.getEngine();
 
     public MyBrowser(){
-    	webView.setMinSize(1600, 900);
-        URL urlHello = getClass().getResource("Index.html");
+    	webView.setMinSize(800, 600);
+        URL urlHello = getClass().getResource("clockBar.html");
         webEngine.load(urlHello.toExternalForm());
 
         getChildren().add(webView);
