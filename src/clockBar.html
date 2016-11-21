@@ -9,59 +9,37 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Css personalizado -->
-     <link href="css/myStyle.css" rel="stylesheet">
+    <link href="css/myStyle.css" rel="stylesheet">
     
+    <script type="text/javascript" src="js/myJs.js"></script>	
     
-	
-	<script>
-		function getTimeRemaining(endtime) {
-	 		var t = Date.parse(endtime) - Date.parse(new Date());
-	  		var seconds = Math.floor((t / 1000) % 60);
-	  		var minutes = Math.floor((t / 1000 / 60) % 60);    	  	
-	  		return {    	   
-	    	'minutes': minutes,
-	    	'seconds': seconds
-	  	};
-		}
-	
-		function startTime(id, endtime){
-			var clock = document.getElementById('clockdiv');
-			var minutesSpan = clock.querySelector('.minutes');
-			var secondsSpan = clock.querySelector('.seconds');
-			
-			function updateClock() {
-				var t = getTimeRemaining(endtime);
-				
-				minutesSpan.innerHTML = t.minutes;
-				secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-					
-				if(t.total<=0){
-					clearInterval(timeinterval);
-				}
-			}
-			updateClock();
-		  	var timeinterval = setInterval(updateClock, 1000);
-		  	
-		  	var deadline = 960000;
-		  	startTime('clockdiv', deadline);
-		}
-	</script>
-
-	
 
 </head>
-<body onload="startTime()">
+<body>
 	<h1>ScretchingOut-Demo</h1>
 	<div id="clockdiv">
   		
+  		<div id="para">
+  			<input type="button" value="parar" onclick="parar();">
+  		</div>
+  		
+  		<div id="inicia" style="display:none">
+  			<input type="button" value="iniciar" onclick="tempo(1);">
+  		</div>
+  		
   		<div>
-    		<span class="minutes"></span>
-    		<div class="smalltext">Minutes</div>
+  			<span id="hora">00h</span>
+  			<div class="smalltext">Horas</div>
+  		</div>
+  		
+  		<div>
+    		<span id="minuto">00m</span>
+    		<div class="smalltext">Minutos</div>
   		</div>
   	
   		<div>
-    		<span class="seconds"></span>
-    		<div class="smalltext">Seconds</div>
+    		<span id="segundo">00s</span>
+    		<div class="smalltext">Segundos</div>
   		</div>
 	</div>
 </body>
