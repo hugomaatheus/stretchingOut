@@ -3,7 +3,7 @@ var intervalo;
 function tempo(op) {
 	if (op == 1) {
 		document.getElementById('parar').style.display = "block";
-		document.getElementById('comeca').style.display = "none";
+		document.getElementById('comeca').style.display = "block";
 	}
 	var s = 1;
 	var m = 0;
@@ -15,13 +15,27 @@ function tempo(op) {
 		if (s < 10) document.getElementById("segundo").innerHTML = "0" + s + "s"; else document.getElementById("segundo").innerHTML = s + "s";
 		if (m < 10) document.getElementById("minuto").innerHTML = "0" + m + "m"; else document.getElementById("minuto").innerHTML = m + "m";		
 		s++;
+				
 	},1000);
+	
+	//if(s == 5) {
+//		var xmlhttp = new XMLHttpRequest();
+//		xmlhttp.open("GET", "index.html", false);
+//		xmlhttp.send();
+//		return xmlhttp.responseText;
+		
+	//}
+	
 }
 
 function parar() {
 	window.clearInterval(intervalo);
 	document.getElementById('parar').style.display = "none";
 	document.getElementById('comeca').style.display = "block";
+}
+
+function page2() {
+	window.open('index.html', '_blank', 'toolbar=0,location=0,menubar=0);
 }
 
 //function volta() {
@@ -31,4 +45,4 @@ function parar() {
 //function limpa() {
 //	document.getElementById('voltas').innerHTML = "";
 //}
-window.onload=tempo;
+//window.onload=tempo;

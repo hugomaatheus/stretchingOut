@@ -36,6 +36,7 @@ class MyBrowser extends Region{
 
     WebView webView = new WebView();
     WebEngine webEngine = webView.getEngine();
+    
 
     public MyBrowser(){
     	webView.setMinSize(800, 600);
