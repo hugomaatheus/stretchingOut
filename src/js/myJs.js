@@ -2,8 +2,8 @@ var intervalo;
 
 function tempo(op) {
 	if (op == 1) {
-		document.getElementById('para').style.display = "block";
-		document.getElementById('inicia').style.display = "none";
+		document.getElementById('parar').style.display = "block";
+		document.getElementById('comeca').style.display = "none";
 	}
 	var s = 1;
 	var m = 0;
@@ -20,20 +20,15 @@ function tempo(op) {
 
 function parar() {
 	window.clearInterval(intervalo);
-	document.getElementById('para').style.display = "none";
-	document.getElementById('inicia').style.display = "block";
+	document.getElementById('parar').style.display = "none";
+	document.getElementById('comeca').style.display = "block";
 }
 
-function volta() {
-	document.getElementById('voltas').innerHTML += document.getElementById('hora').firstChild.data + "" + document.getElementById('minuto').firstChild.data + "" + document.getElementById('segundo').firstChild.data + "<br>";
-}
-
-function limpa() {
-	document.getElementById('voltas').innerHTML = "";
-}
-window.onload= tempo;
-
-
-
-
-}
+//function volta() {
+//	document.getElementById('voltas').innerHTML += document.getElementById('hora').firstChild.data + "" + document.getElementById('minuto').firstChild.data + "" + document.getElementById('segundo').firstChild.data + "<br>";
+//}
+//
+//function limpa() {
+//	document.getElementById('voltas').innerHTML = "";
+//}
+window.onload=tempo;

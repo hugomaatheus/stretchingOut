@@ -17,30 +17,32 @@
 </head>
 <body>
 	<h1>ScretchingOut-Demo</h1>
-	<div id="clockdiv">
-  		
-  		<div id="para">
-  			<input type="button" value="parar" onclick="parar();">
-  		</div>
-  		
-  		<div id="inicia" style="display:none">
-  			<input type="button" value="iniciar" onclick="tempo(1);">
-  		</div>
-  		
-  		<div>
-  			<span id="hora">00h</span>
-  			<div class="smalltext">Horas</div>
-  		</div>
-  		
-  		<div>
-    		<span id="minuto">00m</span>
-    		<div class="smalltext">Minutos</div>
-  		</div>
-  	
-  		<div>
-    		<span id="segundo">00s</span>
-    		<div class="smalltext">Segundos</div>
-  		</div>
+	
+	<div id=clockdiv>
+		
+		<div id="parar">
+			<input type="button" value="Parar" onclick="parar();">
+		</div>
+		
+		<div id="comeca" style="display:none;">
+			<input type="button" value="Comeca" onclick="tempo(1);"><br>
+		</div>
+	
+		<div>
+			<span id="hora">00h</span>
+			<div class="smalltext">Horas</div>
+		</div>
+		
+		<div>
+			<span id="minuto">00m</span>
+			<div class="smalltext">Minutos</div>
+		</div>
+		
+		<div>
+			<span id="segundo">00s</span><br>
+			<div class="smalltext">Segundos</div>
+		</div>
+			
 	</div>
 </body>
 </html>
