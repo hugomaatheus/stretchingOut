@@ -15,17 +15,17 @@
     
 
 </head>
-<body>
-	<h1>ScretchingOut-Demo</h1>
+<body class="body1">
+	<h1>ScretchingOut</h1>
 	
 	<div id=clockdiv>
 		
 		<div id="parar">
-			<input type="button" value="Parar" onclick="parar();">
+			<input class="btn" type="button" style="display: none;" value="Parar" onclick="parar();">
 		</div>
 		
 		<div id="comeca" >
-			<input type="button" value="Comeca" onclick="tempo(1); page2();"><br>
+			<input class="btn" type="button" value="Iniciar" onclick="tempo(1);">
 		</div>
 	
 		<div>
@@ -42,7 +42,13 @@
 			<span id="segundo">00s</span><br>
 			<div class="smalltext">Segundos</div>
 		</div>
+		
+		<div>
+			<span>Os alongamentos irão começar 1h após clicar em "Iniciar"</span>
+		</div>
 			
 	</div>
+	
+	
 </body>
 </html>

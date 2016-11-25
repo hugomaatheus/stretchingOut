@@ -5,6 +5,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
  
 public class JavaFX_Browser extends Application {
  
@@ -24,8 +25,9 @@ public void start(Stage primaryStage) {
     myBrowser = new MyBrowser();
     scene = new Scene(myBrowser);
     
-    primaryStage.setMaximized(false);
+    primaryStage.setFullScreen(true);
     primaryStage.setResizable(false);
+    primaryStage.initStyle(StageStyle.UNDECORATED);
     primaryStage.setScene(scene);
     primaryStage.show();
 }
@@ -39,7 +41,7 @@ class MyBrowser extends Region{
     
 
     public MyBrowser(){
-    	webView.setMinSize(800, 600);
+    	webView.setMinSize(1366, 768);
         URL urlHello = getClass().getResource("clockBar.html");
         webEngine.load(urlHello.toExternalForm());
 

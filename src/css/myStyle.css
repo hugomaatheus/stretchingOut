@@ -1,6 +1,13 @@
-body {
+.body1 {
     text-align: center;
     background: #00ECB9;
+  	font-family: sans-serif;
+  	font-weight: 100;
+}
+
+.body2 {
+    text-align: center;
+    background: #FFFFFF;
   	font-family: sans-serif;
   	font-weight: 100;
 }
@@ -24,15 +31,14 @@ h1{
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: #00BF96;
-    display: inline-block;
+    background: #00BF96; 
 }
 
 #clockdiv div > span{
     padding: 15px;
     border-radius: 3px;
     background: #00816A;
-    display: inline-block;
+   
 }
 
 .smalltext{
@@ -43,4 +49,8 @@ h1{
 div.fucking_clock {
 	text-align: center;
 	margin-top: 30%;
+}
+img {
+	display: block;
+	margin: 0 auto;
 }
