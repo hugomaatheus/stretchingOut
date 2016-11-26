@@ -17,7 +17,7 @@ function tempo(op) {
 		s++;
 		
 		//momento de iniciar os alongamentos
-		if(s == 6) {
+		if(s == 8) {
 			parar();
 			window.open('index.html');
 			
